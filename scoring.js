@@ -17,7 +17,7 @@ $(document).ready(function(){
     sum = sum + subject_points[4];
     $("#sum_indicate").text(sum);
 
-
+    debugger
 
     // ここに、上記を参考にして平均点を出力する処理を書き込む
 
@@ -42,13 +42,20 @@ $(document).ready(function(){
     } else {
       return "D";
     }
-debugger
+
     // console.log(get_achievement);
   }
 
 
   function get_pass_or_failure(){
     // ここに、全ての教科が60点以上なら"合格"の文字列、一つでも60点未満の教科があったら"不合格"の文字列を出す処理を書き込む
+    let judge = "合格";
+    for(let i=0; i<subject_points.length; i++){
+      if(subject_points[i]<60){
+        judge= "不合格";
+        break;
+      }
+      console.log(get_pass_or_failure);
   }
 
   function judgement(){
